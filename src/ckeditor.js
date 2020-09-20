@@ -30,11 +30,13 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
+	RemoveFormat,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -44,8 +46,8 @@ ClassicEditor.builtinPlugins = [
 	CKFinder,
 	EasyImage,
 	Heading,
-  Image,
-  ImageResize,
+	Image,
+	ImageResize,
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
@@ -71,8 +73,8 @@ ClassicEditor.defaultConfig = {
 			'italic',
 			'link',
 			'bulletedList',
-      'numberedList',
-      'blockQuote',
+			'numberedList',
+			'blockQuote',
 			'|',
 			'indent',
 			'outdent',
@@ -81,26 +83,28 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'|',
+			'removeFormat'
 		]
-  },
+	},
 	image: {
 		toolbar: [
-		  'imageTextAlternative',
-		  '|',
-		  'imageResize',
-		  '|',
-		  'imageStyle:alignLeft',
-		  'imageStyle:full',
-		  'imageStyle:alignRight'
+			'imageTextAlternative',
+			'|',
+			'imageResize',
+			'|',
+			'imageStyle:alignLeft',
+			'imageStyle:full',
+			'imageStyle:alignRight'
 		],
 		styles: [
-		  'full',
-		  'alignLeft',
-		  'alignRight'
+			'full',
+			'alignLeft',
+			'alignRight'
 		],
 		resizeUnit: 'px'
-  },
+	},
 	table: {
 		contentToolbar: [
 			'tableColumn',
@@ -110,7 +114,7 @@ ClassicEditor.defaultConfig = {
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'ru',
-  mediaEmbed: {
-    previewsInData: true
-  }
+	mediaEmbed: {
+		previewsInData: true
+	}
 };
