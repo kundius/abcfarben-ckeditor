@@ -30,7 +30,6 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
-import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -59,8 +58,7 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation,
-	RemoveFormat
+	TextTransformation
 ];
 
 // Editor configuration.
